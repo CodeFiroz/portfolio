@@ -38,7 +38,7 @@ const Cursor = () => {
       className="fixed pointer-events-none z-[9999] will-change-transform"
       animate={{
         x: position.x - 20, // Center the image
-        y: position.y - 20,
+        y: position.y - 0,
         scale: isClicking ? 0.8 : isHovering ? 1.5 : 1,
         rotate: isHovering ? [0, 10, -10, 0] : 0,
         opacity: 1

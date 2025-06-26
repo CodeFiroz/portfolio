@@ -4,13 +4,12 @@ import LoopSlider from './LoopSlider'
 import { ArrowUpRight } from 'lucide-react'
 
 const Works = () => {
-  const works = [
-    "https://yashjain.design/wp-content/uploads/2024/05/Frame-17-1024x768.png",
-    "https://yashjain.design/wp-content/uploads/2024/05/Frame-18-1024x768.png",
-    "https://yashjain.design/wp-content/uploads/2024/06/raj-1024x768.jpg",
-    "https://yashjain.design/wp-content/uploads/2024/05/Frame-20-1024x768.png",
-    "https://yashjain.design/wp-content/uploads/2024/05/Frame-15-1536x1152.png"
-  ]
+  let works = [];
+
+  for(let i= 1; i < 17; i++){
+    works.push(`/works/${i}.jpg`)
+  }
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -77,28 +76,7 @@ const Works = () => {
         className="flex justify-center items-center"
         variants={itemVariants}
       >
-        <motion.button 
-          className='flex items-center gap-3 px-8 py-3 bg-amber-500 dark:bg-amber-600 font-medium rounded-full ring-1 ring-amber-600/20 dark:ring-amber-500/30 text-sm hover:ring-2 hover:ring-amber-600/40 transition-all'
-          variants={buttonVariants}
-          initial="rest"
-          whileHover="hover"
-          whileTap={{ scale: 0.95 }}
-        >
-          View All Works 
-          <motion.span
-            animate={{
-              x: [0, 4, 0],
-              y: [0, -4, 0]
-            }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            <ArrowUpRight size={16}/>
-          </motion.span>
-        </motion.button>
+       
       </motion.div>
     </motion.section>
   )

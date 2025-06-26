@@ -27,7 +27,7 @@ const Footer = () => {
           whileTap={{ scale: 0.95 }}
         >
           <Mail size={16} />
-          <span className="truncate max-w-[200px] sm:max-w-none">khanfiroz4045@gmail.com</span>
+          <a href='mailto:khanfiroz4045@gmail.com' className="truncate max-w-[200px] sm:max-w-none">khanfiroz4045@gmail.com</a>
         </motion.a>
         
         <motion.p 
@@ -63,7 +63,9 @@ const Footer = () => {
           damping: 10
         }}
       >
-        <motion.span
+        <motion.a
+        href='https://wa.me/919821574580'
+        target='_blank'
           className="inline-block"
           whileHover={{
             rotate: [0, 5, -5, 0],
@@ -74,7 +76,7 @@ const Footer = () => {
           }}
         >
           Say Hi!
-        </motion.span>
+        </motion.a>
       </motion.h2>
     </motion.footer>
   )
